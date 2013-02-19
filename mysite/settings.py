@@ -67,6 +67,10 @@ DATABASES = {
     }
 }
 
+# Parse database configuration from $DATABASE_URL
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config(default='postgres://qjvikmdsjncwjm:zGw1ZinpFzURZDXWWy7wpxCL4S@ec2-107-21-126-45.compute-1.amazonaws.com:5432/d5g98uq0effajd')
+
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
@@ -85,8 +89,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
