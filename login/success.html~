@@ -1,0 +1,27 @@
+<html>
+
+<head>
+</head>
+
+<body>
+<div align="center" style="margin-top:15%;">
+<div align="center" style="border-style:solid;border-width:1px;width:300px;height:150px;">
+	<div align="center" style="margin-top:20;height:40px;width:200px;">
+	Welcome
+	</div>
+	<button type="button" style="margin-top:20">
+	Logout
+	</button>
+</div>
+</div>
+<div style="display: block;">
+	<div align="center" style="margin-top:20;height:40px;width:200px;">
+		"test"
+	</div>
+	<form>
+		<input type="submit" id="logout" value="Logout">	
+	</form>
+</div>
+</body>
+
+</html>
