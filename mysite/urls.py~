@@ -3,7 +3,7 @@ from django.contrib import admin
 from login.views import loginx
 from login.views import addx
 from login.views import TESTAPI_resetFixturex
-from login.views import unitTests
+from login.views import TESTAPI_unitTests
 
 admin.autodiscover()
 
@@ -16,8 +16,9 @@ urlpatterns = patterns('',
     #url(r'^users/login', loginx),
     #url(r'^users/add', addx),
     #url(r'^TESTAPI/resetFixture', TESTAPI_resetFixturex),
+    url(r'^$', index),
     url(r'^users/login', loginx),
     url(r'^users/add', addx),
     url(r'^TESTAPI/resetFixture', TESTAPI_resetFixturex),
-    url(r'^TESTAPI/unitTests', unitTests) 
+    url(r'^TESTAPI/unitTests', TESTAPI_unitTests) 
 )

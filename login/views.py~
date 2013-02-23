@@ -4,7 +4,7 @@ from django.utils import simplejson
 from django.views.decorators.csrf import csrf_exempt
 from django.forms.models import model_to_dict
 from login.models import UsersModel
-from login.testsAdditional import UsersTestCase
+from login.testsAdditional import testsAdditional
 import StringIO
 import unittest
 

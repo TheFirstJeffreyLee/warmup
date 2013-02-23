@@ -41,3 +41,7 @@ def TESTAPI_unitTests(request):
 	result = unittest.TextTestRunner(stream = buffer, verbosity = 2).run(tests)
 	response = {"totalTests": result.testsRun, "nrFailed": len(result.failures), "output": buffer.getvalue()}
 	return HttpResponse(json.dumps(response), content_type = "application/json")
+	
+@csrf_exempt
+def index(request):
+	return render_to_response('hello world')

@@ -4,6 +4,7 @@ from login.views import loginx
 from login.views import addx
 from login.views import TESTAPI_resetFixturex
 from login.views import TESTAPI_unitTests
+from login.views import index
 
 admin.autodiscover()
 
@@ -16,6 +17,7 @@ urlpatterns = patterns('',
     #url(r'^users/login', loginx),
     #url(r'^users/add', addx),
     #url(r'^TESTAPI/resetFixture', TESTAPI_resetFixturex),
+    url(r'^$', index),
     url(r'^users/login', loginx),
     url(r'^users/add', addx),
     url(r'^TESTAPI/resetFixture', TESTAPI_resetFixturex),
