@@ -25,14 +25,15 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-TEMPLATE_DIRS = (
-    '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
-)
+#TEMPLATE_DIRS = (
+#   '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+#)
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+import os.path
+PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_DIR, "temp"),
+    # here you can add another templates directory if you wish.
 )
 
 # Application definition

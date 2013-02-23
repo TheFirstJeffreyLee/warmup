@@ -25,8 +25,15 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+#TEMPLATE_DIRS = (
+#   '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+#)
+
+import os.path
+PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
 TEMPLATE_DIRS = (
-    '/home/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+    os.path.join(PROJECT_DIR, "templates"),
+    # here you can add another templates directory if you wish.
 )
 
 # Application definition
