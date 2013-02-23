@@ -26,7 +26,13 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
-    '/home/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+    '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
 )
 
 # Application definition
