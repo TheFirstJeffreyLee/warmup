@@ -45,4 +45,4 @@ def TESTAPI_unitTests(request):
 	
 @csrf_exempt
 def index(request):
-	return HttpResponse("hello world")
+	return render_to_response("login/login.html")
