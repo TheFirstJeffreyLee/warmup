@@ -25,6 +25,9 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS = (
+    '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+)
 
 # Application definition
 

@@ -25,6 +25,9 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS = (
+    '/home/jeffrey/cs169/djcode/mysite/login/temp', # Change this to your own directory.
+)
 
 # Application definition
 
@@ -69,7 +72,7 @@ DATABASES = {
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config(default='postgres://qjvikmdsjncwjm:zGw1ZinpFzURZDXWWy7wpxCL4S@ec2-107-21-126-45.compute-1.amazonaws.com:5432/d5g98uq0effajd')
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
