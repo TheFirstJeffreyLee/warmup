@@ -105,6 +105,8 @@
  $('#logout').click(function() {
    $('#out').show();
    $('#in').hide();
+   $('#name').val("")
+   $('#pw').val("")
    $('#out_text').text("Welcome");
  });
 
@@ -114,9 +116,9 @@
 	function get_message_for_errcode(code) {
 	    if( code == -1) {
 	        return ("Invalid username and password combination. Please try again. ");
-	    } else if( code == -2) {
+	    } else if( code == -3) {
 	        return ("The user name should not be empty and at most 128 characters long. Please try again.");
- 	   } else if( code == -3) {
+ 	   } else if( code == -2) {
   	      return ("This user name already exists. Please try again.");
   	  } else if( code == -4) {
   	      return ("The password should be at most 128 characters long. Please try again");
