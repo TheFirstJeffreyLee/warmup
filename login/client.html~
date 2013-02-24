@@ -10,7 +10,7 @@
 </head>
 
 <center>
-<div id="login-page" class="box" style="border-style:solid;border-width:1px;">
+<div id="login-page" class="box" style="border-style:solid;border-width:1px;width:300px">
   <div id="login-message" class="message"></div>
   <center>
     <form>
@@ -22,7 +22,7 @@
   </center>
 </div>
 
-<div id="welcome-page" class="box" style="border-style:solid;border-width:1px;">
+<div id="welcome-page" class="box" style="border-style:solid;border-width:1px;width:300px;">
   <div id="welcome-message" class="message"></div>
   <center>
     <form>
