@@ -10,10 +10,12 @@
 		<div id="out_text" align="center" style="margin-top:20;height:40px;width:200px;">
 			Welcome
 		</div>
+		<div>
 		Username: <input id="name" type="text" name="user"><br>
 		Password: <input id="pw" type="password" name="password"><br>
 		<button id="login">Login</button>
  	  <button id="add">Add User</button>
+ 	  </div>
 
 	</div>
 
@@ -52,7 +54,7 @@
      c = data.count;
      $('#out').hide();
    	 $('#in').show();
-   	 $('#in_text').text("Welcome "+user+"<br>You have logged in "+ c +" times.");
+   	 $('#in_text').html("Welcome "+user+"<br>You have logged in "+ c +" times.");
   } else {
      if( debug_flag ) {
         if( data.errCode != -3 && data.errCode != -4 && data.errCode != -2 ) {
@@ -72,7 +74,7 @@
      c = data.count;
      $('#out').hide();
    	 $('#in').show();
-   	 $('#in_text').text("Welcome "+user+"<br>You have logged in "+ c +" times.");
+   	 $('#in_text').html("Welcome "+user+"<br>You have logged in "+ c +" times.");
   } else { //unsuccessful login
      if( debug_flag ) {
         if( data.errCode != -1 ) {
