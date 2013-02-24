@@ -39,12 +39,6 @@
    $('#in_text').text("Success Bitches");
  });
  
- $('#add').click(function() {
-   $('#out').hide();
-   $('#in').show();
-   $('#in_text').text("added user");
- });
- 
  $('#logout').click(function() {
    $('#out').show();
    $('#in').hide();
