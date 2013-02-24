@@ -45,43 +45,9 @@
       failure: failure
     });
 	}
-
-//login
- $('#login').click(function() {
-   username = $('#name').val()
-   password = $('#pw').val()
-   json_request("/users/login", { user: username, password: password }, function(data) { return handle_login_response(data, username); }, function(err) { alert('error occurred on request'); });
-   return false;
- });
- 
- //login success func
- function handle_login_response(data, user) {
-  if( data.errCode > 0 ) {
-     c = data.count;
-     $('#out').hide();
-   	 $('#in').show();
-   	 $('#in_text').text("Welcome "+user+"<br>You have logged in "+ c +" times.");
-  } else { //unsuccessful login
-     if( debug_flag ) {
-        if( data.errCode != -1 ) {
-           alert( 'Illegal error code encounted for this state');
-        }
-     }
-   	 $('#name').val("")
-     $('#pw').val("")
-     $('#out_text').text(get_message_for_errcode(data.errCode));  
-  }
-}
-
-//add
- $('#add').click(function() {
-   username = $('#name').val()
-   password = $('#pw').val()
-   json_request("/users/add", { user: username, password: password }, function(data) { return handle_add_user_response(data, username); }, function(err) { alert('error occurred on request'); });
-   return false;
- });
- 
-function handle_add_user_response(data, user) {
+	
+	//add user func
+	function handle_add_user_response(data, user) {
   if( data.errCode > 0 ) {
      c = data.count;
      $('#out').hide();
@@ -98,6 +64,42 @@ function handle_add_user_response(data, user) {
      $('#out_text').text(get_message_for_errcode(data.errCode));   
   }
 }
+
+ //login func
+ function handle_login_response(data, user) {
+  if( data.errCode > 0 ) {
+
+     c = data.count;
+     $('#out').hide();
+   	 $('#in').show();
+   	 $('#in_text').text("Welcome "+user+"<br>You have logged in "+ c +" times.");
+  } else { //unsuccessful login
+     if( debug_flag ) {
+        if( data.errCode != -1 ) {
+           alert( 'Illegal error code encounted for this state');
+        }
+     }
+   	 $('#name').val("")
+     $('#pw').val("")
+     $('#out_text').text(get_message_for_errcode(data.errCode));  
+  }
+}
+
+//login
+ $('#login').click(function() {
+   username = $('#name').val()
+   password = $('#pw').val()
+   json_request("/users/login", { user: username, password: password }, function(data) { return handle_login_response(data, username); }, function(err) { alert('error occurred on request'); });
+   return false;
+ });
+
+//add
+ $('#add').click(function() {
+   username = $('#name').val()
+   password = $('#pw').val()
+   json_request("/users/add", { user: username, password: password }, function(data) { return handle_add_user_response(data, username); }, function(err) { alert('error occurred on request'); });
+   return false;
+ });
 
 //logout
  $('#logout').click(function() {
